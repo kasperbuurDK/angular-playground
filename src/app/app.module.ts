@@ -11,12 +11,18 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
+import { DatepickerComponent } from './datepicker/datepicker.component';
+import {CdkListbox, CdkOption} from '@angular/cdk/listbox';
+import { ListBoxComponent } from './list-box/list-box.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
-    SecondComponent
+    SecondComponent,
+    DatepickerComponent,
+    ListBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,9 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule,
      MatInputModule,
       MatNativeDateModule,
-       MatDatepickerModule
+       MatDatepickerModule,
+       CdkListbox, 
+       CdkOption
       ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'da'},
